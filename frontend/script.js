@@ -54,9 +54,9 @@ async function loadFiles() {
 }
 
 async function deleteFile(filename) {
-  await fetch(`${API_URL}/delete/${filename}`, {
-    method: "DELETE",
-  });
+  await fetch(`${API_URL}/delete/${encodeURIComponent(filename)}`, {
+    method: "DELETE"
+});
 
   loadFiles();
 }
