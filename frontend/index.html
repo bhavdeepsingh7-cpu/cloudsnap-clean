@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudSnap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="badge">Azure Cloud Multimedia Platform</p>
+        <h1>☁️ CloudSnap</h1>
+        <p class="subtitle">
+          Upload, preview, and manage your multimedia files using Azure Blob Storage.
+        </p>
+      </div>
+    </section>
+
+    <section class="upload-card">
+      <label class="drop-zone" for="fileInput">
+        <span class="icon">⬆️</span>
+        <strong>Choose a file to upload</strong>
+        <small>Images and videos supported</small>
+        <input type="file" id="fileInput" />
+      </label>
+
+      <button onclick="uploadFile()">Upload to Cloud</button>
+      <p id="status"></p>
+    </section>
+
+    <section class="files-section">
+      <div class="section-header">
+        <h2>Uploaded Files</h2>
+        <button class="secondary" onclick="loadFiles()">Refresh</button>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
